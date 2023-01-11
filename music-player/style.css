@@ -73,8 +73,24 @@ button {
   cursor: pointer;
 }
 
+.progress {
+  width: 19rem;
+  position: relative;
+}
+
+#progress-bg {
+  width: 19rem;
+  height: 0.6rem;
+  border-radius: 0.96rem;
+
+  background-color: rgba(217, 217, 217, 0.3);
+}
+
 .progress input {
   margin-bottom: 0.96rem;
+
+  position: absolute;
+  top: 0;
 }
 
 input[type="range"] {
@@ -100,7 +116,6 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   
-  width: 16.5rem;
   height: 0.6rem;
   border-radius: 0.96rem;
 
@@ -114,6 +129,8 @@ input[type="range"]::-webkit-slider-thumb {
 .time {
   display: flex;
   justify-content: space-between;
+
+  margin-top: .96rem;
 }
 
 @media (min-width: 700px) {
@@ -146,13 +163,11 @@ input[type="range"]::-webkit-slider-thumb {
   .progress {
     display: flex;
     flex-direction: column;
-  }
 
-  input[type="range"] {
     width: 30rem;
   }
 
-  input[type="range"]::-webkit-slider-thumb {
-    width: 26.1rem;
+  #progress-bg, input[type="range"] {
+    width: 30rem;
   }
 }
