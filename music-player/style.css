@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-color: #2a2141;
+  --text-color: #e1e1e6;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  padding: 3.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.9rem;
+}
+
+.music img {
+  width: 19rem;
+  height: 19rem;
+
+  margin-top: 1.3rem;
+  margin-bottom: 2.9rem;
+
+  border-radius: 0.6rem;
+}
+
+.music-info h1 {
+  margin-bottom: 0.96rem;
+
+  font-size: 2.4rem;
+  line-height: 100%;
+}
+
+.music-info p {
+  font-size: 1.92rem;
+  line-height: 100%;
+  opacity: 0.67;
+}
+
+.buttons {
+  display: flex;
+  gap: 5rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.progress input {
+  margin-bottom: 0.96rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 19rem;
+
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.6rem;
+  border-radius: 0.96rem;
+
+  background-color: rgba(217, 217, 217, 0.3);
+
+  position: relative;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  
+  width: 16.5rem;
+  height: 0.6rem;
+  border-radius: 0.96rem;
+
+  background-color: #d9d9d9;
+  opacity: 0.8;
+
+  position: absolute;
+  left: 0;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 700px) {
+  .content {
+    padding: 2.9rem;
+  }
+
+  .music {
+    display: flex;
+    align-items: center;
+    gap: 2.9rem;
+  }
+
+  .music img {
+    width: 8.4rem;
+    height: 8.4rem;
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .progress {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .progress {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type="range"] {
+    width: 30rem;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 26.1rem;
+  }
+}
