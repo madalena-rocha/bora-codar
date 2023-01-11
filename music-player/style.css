@@ -73,6 +73,10 @@ button {
   cursor: pointer;
 }
 
+.hide {
+  display: none;
+}
+
 .progress {
   width: 19rem;
   position: relative;

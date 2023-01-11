@@ -7,6 +7,7 @@ const musicArtist = document.querySelector("#music-artist");
 
 const buttonPlayBack = document.querySelector("#play-back");
 const buttonPlay = document.querySelector("#play");
+const buttonPause = document.querySelector("#pause");
 const buttonPlayForward = document.querySelector("#play-forward");
 
 const musics = [
@@ -32,13 +33,22 @@ const musics = [
 
 let id = 0;
 
+const progressBar = document.querySelector("#progress-bar");
+
+function resetMusic() {
+  progressBar.style.width = (0 * 100) + "%";
+
+  buttonPause.classList.add('hide');
+  buttonPlay.classList.remove('hide');
+}
+
 function getMusic() {
   musicAlbum.src = musics[id].album;
   audioPlayer.src = musics[id].path;
   musicTitle.innerText = musics[id].title;
   musicArtist.innerText = musics[id].artist;
 
-  document.querySelector("#progress-bar").style.width = (0 * 100) + "%";
+  resetMusic()
 }
 
 getMusic();
@@ -54,7 +64,15 @@ function getForwardMusic() {
 }
 
 buttonPlay.addEventListener("click", function () {
-  audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
+  audioPlayer.play();
+  buttonPlay.classList.add('hide');
+  buttonPause.classList.remove('hide');
+});
+
+buttonPause.addEventListener("click", function () {
+  audioPlayer.pause();
+  buttonPause.classList.add('hide');
+  buttonPlay.classList.remove('hide');
 });
 
 buttonPlayBack.addEventListener("click", getBackMusic);
@@ -100,10 +118,7 @@ setInterval(updateTimeElapsed, 1000);
 
 // Barra de progresso
 
-const progressBar = document.querySelector("#progress-bar");
-
 audioPlayer.addEventListener("timeupdate", function() {
   const progress = audioPlayer.currentTime / audioPlayer.duration;
   progressBar.style.width = (progress * 100) + "%";
-  progressBar.style.backgroundColor = rgba(217, 217, 217, 0.8);
 });
