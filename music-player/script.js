@@ -1,3 +1,5 @@
+// Funcionalidade dos botões
+
 const musicAlbum = document.querySelector("#music-album");
 const audioPlayer = document.querySelector('#audio-player');
 const musicTitle = document.querySelector("#music-title");
@@ -55,3 +57,39 @@ buttonPlay.addEventListener("click", function () {
 
 buttonPlayBack.addEventListener('click', getBackMusic);
 buttonPlayForward.addEventListener('click', getForwardMusic);
+
+// Tempo decorrido e tempo restante
+
+const remainingTime = document.querySelector("#time-remaining");
+const elapsedTime = document.querySelector("#elapsed-time");
+
+function updateTimeRemaining() {
+  const timeRemaining = audioPlayer.duration - audioPlayer.currentTime;
+
+  let minutes = Math.floor(timeRemaining / 60);
+  minutes = String(minutes).padStart(2, "0");
+
+  let seconds = (timeRemaining % 60).toFixed(0);
+  seconds = String(seconds).padStart(2, "0");
+  
+  remainingTime.textContent = `${minutes}:${seconds}`;
+}
+
+function updateTimeElapsed() {
+    const timeElapsed = audioPlayer.currentTime;
+
+    let minutes = Math.floor(timeElapsed / 60);
+    minutes = String(minutes).padStart(2, "0");
+
+    let seconds = (timeElapsed % 60).toFixed(0);
+    seconds = String(seconds).padStart(2, "0");
+
+    elapsedTime.textContent = `${minutes}:${seconds}`;
+}
+
+audioPlayer.addEventListener("timeupdate", updateTimeRemaining, updateTimeElapsed);
+
+setInterval(updateTimeRemaining, 1000);
+setInterval(updateTimeElapsed, 1000);
+
+// Barra de progresso

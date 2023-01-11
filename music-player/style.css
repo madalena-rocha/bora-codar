@@ -34,6 +34,10 @@ body {
   gap: 2.9rem;
 }
 
+.music {
+  text-align: center;
+}
+
 .music img {
   width: 19rem;
   height: 19rem;
