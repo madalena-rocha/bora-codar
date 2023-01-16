@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-color: #D9CDF7;
+  --text-color: #271A45;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+
+  height: 100vh;
+
+	display: flex;
+  justify-content: center;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+
+	cursor: pointer;
+}
+
+.content {
+  display: flex;
+	flex-direction: column;
+  align-items: center;
+	justify-content: center;
+	gap: 1.3rem;
+}
+
+.product-img {
+	display: flex;
+	position: relative;
+}
+
+.product-img img {
+	width: 44.9rem;
+}
+
+#view-product {
+	position: absolute;
+	top: .8rem;
+	right: 5rem;
+}
+
+#close-view {
+	position: absolute;
+	top: .8rem;
+	right: 6.7rem;
+}
+
+.hide {
+	display: none;
+}
+
+.product-description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.product-description p {
+	font-weight: 300;
+	font-size: 1rem;
+}
+
+.product-description h1 {
+	font-family: 'Crimson Pro';
+	font-weight: 600;
+	font-size: 3.2rem;
+
+	margin-top: 1.2rem;
+	margin-bottom: 1.2rem;
+}
+
+.product-description h2 {
+	font-weight: 400;
+	font-size: 1.6rem;
+}
+
+#add-product {
+	border: 0.5px solid var(--text-color);
+	border-radius: 999px;
+
+	margin-top: 2rem;
+	padding: .8rem 1.6rem;
+
+	transition: background 500ms;
+}
+
+#add-product:hover {
+	background-color: var(--text-color);
+	color: var(--base-color);
+
+	transition: background 500ms;
+}
+
+@media (min-width: 850px) {
+	.content {
+		flex-direction: row;
+	}
+
+	.product-description {
+		align-items: flex-start;
+	}
+}
