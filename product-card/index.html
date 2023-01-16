@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
+
     <title>Card de produto</title>
 
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="content">
       <div class="product-img">
-        <img id="preview-img" src="./assets/product.png" alt="Imagem do produto." />
-        <img id="product-animation" class="hide" src="./assets/animation.gif" alt="Animação do produto.">
+        <img
+          id="preview-img"
+          src="./assets/product.png"
+          alt="Imagem do produto."
+        />
+        <img id="product-animation" class="hide" src="./assets/animation.gif" alt="Animação do produto."> 
 
         <button id="view-product">
           <svg
@@ -54,9 +61,20 @@
         </button>
 
         <button id="close-view" class="hide">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.195262 0.195201C0.455612 -0.0651484 0.877722 -0.0651484 1.13807 0.195201L8 7.05713L14.8619 0.195201C15.1223 -0.0651484 15.5444 -0.0651484 15.8047 0.195201C16.0651 0.455551 16.0651 0.877661 15.8047 1.13801L8.94281 7.99994L15.8047 14.8619C16.0651 15.1222 16.0651 15.5443 15.8047 15.8047C15.5444 16.065 15.1223 16.065 14.8619 15.8047L8 8.94275L1.13807 15.8047C0.877722 16.065 0.455612 16.065 0.195262 15.8047C-0.0650874 15.5443 -0.0650874 15.1222 0.195262 14.8619L7.05719 7.99994L0.195262 1.13801C-0.0650874 0.877661 -0.0650874 0.455551 0.195262 0.195201Z" fill="#271A45"/>
-          </svg>            
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.195262 0.195201C0.455612 -0.0651484 0.877722 -0.0651484 1.13807 0.195201L8 7.05713L14.8619 0.195201C15.1223 -0.0651484 15.5444 -0.0651484 15.8047 0.195201C16.0651 0.455551 16.0651 0.877661 15.8047 1.13801L8.94281 7.99994L15.8047 14.8619C16.0651 15.1222 16.0651 15.5443 15.8047 15.8047C15.5444 16.065 15.1223 16.065 14.8619 15.8047L8 8.94275L1.13807 15.8047C0.877722 16.065 0.455612 16.065 0.195262 15.8047C-0.0650874 15.5443 -0.0650874 15.1222 0.195262 14.8619L7.05719 7.99994L0.195262 1.13801C-0.0650874 0.877661 -0.0650874 0.455551 0.195262 0.195201Z"
+              fill="#271A45"
+            />
+          </svg>
         </button>
       </div>
 
@@ -67,8 +85,8 @@
           <h2>R$ 4.000</h2>
         </div>
 
-				<button id="add-product">ADICIONAR À CESTA</button>
-			</div>
+        <button id="add-product">ADICIONAR À CESTA</button>
+      </div>
     </div>
 
     <script src="./script.js"></script>

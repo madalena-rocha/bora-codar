@@ -9,4 +9,4 @@ Como participar do desafio:
 
 Resultados dos desafios:
 - <a href="https://www.linkedin.com/posts/madalena-machado-rocha-a79242116_boracodar-css-dev-activity-7018952263721218048-rpRI?utm_source=share&utm_medium=member_desktop">Semana 01</a>: Codar um player de música;
-- <a href="">Semana 02</a>: Codar um card de produto;
+- <a href="https://www.linkedin.com/posts/madalena-machado-rocha-a79242116_boracodar-css-dev-activity-7020818495323914242-a0rP?utm_source=share&utm_medium=member_desktop">Semana 02</a>: Codar um card de produto;
