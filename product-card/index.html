@@ -9,14 +9,14 @@
 		
     <title>Card de produto</title>
 
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="content">
       <div class="product-img">
-        <img src="./assets/product.png" alt="Imagem do produto." />
-        <img class="hide" src="./assets/animation.gif" alt="Animação do produto.">
+        <img id="preview-img" src="./assets/product.png" alt="Imagem do produto." />
+        <img id="product-animation" class="hide" src="./assets/animation.gif" alt="Animação do produto.">
 
         <button id="view-product">
           <svg
@@ -70,5 +70,7 @@
 				<button id="add-product">ADICIONAR À CESTA</button>
 			</div>
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
