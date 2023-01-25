@@ -66,8 +66,17 @@ button:disabled {
   cursor: not-allowed;
 }
 
+button.load {
+  cursor: wait;
+}
+
+button.move {
+  cursor: move;
+}
+
 .content {
   margin-inline: 4.4rem;
+  height: 36.2rem;
 }
 
 h1 {
@@ -85,10 +94,18 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 3.2rem;
+
+  position: relative;
+}
+
+.hide {
+  display: none;
 }
 
 #primary {
   background-color: var(--button-default-primary);
+  
+  position: absolute;
 }
 
 #primary:hover {
@@ -97,6 +114,9 @@ p {
 
 #secondary {
   background-color: var(--button-default-secondary);
+
+  position: absolute;
+  top: 8rem;
 }
 
 #secondary:hover {
@@ -108,13 +128,14 @@ p {
   align-items: center;
   justify-content: center;
   gap: .8rem;
+  
+  position: absolute;
+  top: 16rem;
 }
 
-.hide {
-  display: none;
-}
-
-.load {
+#primary-loading,
+#secondary-loading, 
+#tertiary-loading {
   animation: button-loading-spinner 1s ease infinite;
 }
 

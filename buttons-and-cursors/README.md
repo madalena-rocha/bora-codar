@@ -9,6 +9,7 @@ Codar botões e cursores.
 ## 🛠️ Tecnologias
 - HTML;
 - CSS;
+- JavaScript;
 - Git e GitHub.
 
 ## 💜 Contato
