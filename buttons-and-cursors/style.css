@@ -50,6 +50,11 @@ button {
   text-transform: uppercase;
 
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
 }
 
 button:focus {
@@ -103,4 +108,22 @@ p {
   align-items: center;
   justify-content: center;
   gap: .8rem;
+}
+
+.hide {
+  display: none;
+}
+
+.load {
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
 }
