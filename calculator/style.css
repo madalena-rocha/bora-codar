@@ -36,6 +36,10 @@ button {
   cursor: pointer;
 }
 
+.hide {
+  display: none;
+}
+
 .calculator {
   width: 35.6rem;
   height: 56.6rem;

@@ -23,6 +23,8 @@
 
         <div id="result">
           <svg
+            class="hide" 
+            id="result-icon"
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -47,9 +49,9 @@
       </div>
 
       <div id="keyboard">
-        <button id="clear" onclick="back()">CE</button>
-        <button id="cancel" onclick="clean()">C</button>
-        <button id="percentage" onclick="insert(' % ')">
+        <button id="clear" onclick="clearEntry()">CE</button>
+        <button id="cancel" onclick="allClear()">C</button>
+        <button id="percentage" onclick="handlePercentage()">
           <svg
             width="28"
             height="28"
