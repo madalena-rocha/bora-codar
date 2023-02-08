@@ -1,4 +1,4 @@
-# 🧮 Calculator
+# 🔢 Calculator
 
 > Desafio da semana 05
 

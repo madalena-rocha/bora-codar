@@ -51,7 +51,7 @@
       <div id="keyboard">
         <button id="clear" onclick="clearEntry()">CE</button>
         <button id="cancel" onclick="allClear()">C</button>
-        <button id="percentage" onclick="handlePercentage()">
+        <button id="percentage" onclick="insert('%')">
           <svg
             width="28"
             height="28"
@@ -79,7 +79,7 @@
             />
           </svg>
         </button>
-        <button id="division" onclick="insert(' / ')">
+        <button id="division" onclick="insert('/')">
           <svg
             width="28"
             height="28"
@@ -107,7 +107,7 @@
         <button onclick="insert('7')">7</button>
         <button onclick="insert('8')">8</button>
         <button onclick="insert('9')">9</button>
-        <button id="multiplication" onclick="insert(' * ')">
+        <button id="multiplication" onclick="insert('*')">
           <svg
             width="28"
             height="28"
@@ -133,7 +133,7 @@
         <button onclick="insert('4')">4</button>
         <button onclick="insert('5')">5</button>
         <button onclick="insert('6')">6</button>
-        <button id="minus" onclick="insert(' - ')">
+        <button id="minus" onclick="insert('-')">
           <svg
             width="28"
             height="28"
@@ -153,7 +153,7 @@
         <button onclick="insert('1')">1</button>
         <button onclick="insert('2')">2</button>
         <button onclick="insert('3')">3</button>
-        <button id="plus" onclick="insert(' + ')">
+        <button id="plus" onclick="insert('+')">
           <svg
             width="28"
             height="28"
@@ -176,7 +176,7 @@
           </svg>
         </button>
 
-        <button id="plus-minus" onclick="insert('positive-negative')">
+        <button id="plus-minus" onclick="positiveNegative()">
           <svg
             width="28"
             height="28"
@@ -211,7 +211,7 @@
           </svg>
         </button>
         <button onclick="insert('0')">0</button>
-        <button onclick="insert('.')">,</button>
+        <button onclick="insert(',')">,</button>
         <button id="equals" onclick="calculate()">
           <svg
             width="28"
