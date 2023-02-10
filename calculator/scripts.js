@@ -53,16 +53,27 @@ function clearEntry() {
 /* POSITIVE-NEGATIVE */
 
 function positiveNegative() {
-  let resultValue = parseFloat(resultDisplay.innerHTML);
   let operandsValue = operandsDisplay.innerHTML;
+  let newOperandsValue = "";
 
-  if (resultValue >= 0) {
-    operandsDisplay.innerHTML = "-" + operandsValue;
-    calculate();
-  } else {
-    operandsDisplay.innerHTML = Math.abs(parseFloat(operandsValue));
-    calculate();
+  for (let i = 0; i < operandsValue.length; i++) {
+    if (operandsValue[i] === '-' && (i !== 0)) {
+      newOperandsValue += '+';
+    } else if (operandsValue[i] === '+') {
+      newOperandsValue += '-';
+    } else {
+      newOperandsValue += operandsValue[i];
+    }
   }
+
+  if (newOperandsValue[0] === '-') {
+    newOperandsValue = newOperandsValue.substring(1);
+  } else {
+    newOperandsValue = '-' + newOperandsValue;
+  }
+  
+  operandsDisplay.innerHTML = newOperandsValue;
+  calculate();
 }
 
 /* CALCULATE */
@@ -76,6 +87,11 @@ function calculate() {
   if (operands) {
     resultDisplay.innerHTML = eval(operands).toString().replace(".", ",")
     removeClassHide();
+
+    if (resultDisplay.innerHTML == Infinity ) {
+      alert ("Não é possível dividir por zero");
+      resultDisplay.innerHTML = "∞";
+    }
   } else {
     resultDisplay.innerHTML = "0";
   }
