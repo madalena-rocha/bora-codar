@@ -38,7 +38,7 @@ function allClear() {
 
 function clearEntry() {
   let result = resultDisplay.innerHTML;
-  resultDisplay.innerHTML = result.substring(0, result.length - 1);
+  resultDisplay.innerHTML = result.substring(0, 0);
 
   if(result.length == 0) {
     let operands = operandsDisplay.innerHTML;
@@ -85,7 +85,7 @@ function calculate() {
   operands = operands.replaceAll(",", ".");
 
   if (operands) {
-    resultDisplay.innerHTML = eval(operands).toString().replace(".", ",")
+    resultDisplay.innerHTML = eval(operands).toString().replace(".", ",");
     removeClassHide();
 
     if (resultDisplay.innerHTML == Infinity ) {
